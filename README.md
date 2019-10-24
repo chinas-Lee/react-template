@@ -1,2 +1,2 @@
 # react-template
-React + Redux + Scss + ES6 + ES7 + 多环境打包 + 路由守卫
+React + Redux + Scss + ES6 + ES7 + Yarn + 多环境打包 + 路由守卫
