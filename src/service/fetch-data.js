@@ -2,6 +2,7 @@ import Axios from './http'
 import BaseURL from './ip-config'
 import ConfigInfo from '../utils/config'
 import { _getSign } from '../assets/js/user-methods'
+import { _removeSessionStorage } from '../assets/js/storage-methods'
 import { Toast } from 'antd-mobile'
 
 /*
@@ -32,6 +33,8 @@ const FetchData = function (api = '', bodyParams = {}, headParams = '', method =
                     reject(result.msg || ConfigInfo.reqErrorMsg)
                     break
                 case -2:
+                    _removeSessionStorage('userData')
+                    window.location.href = window.location.origin + '/login'
                     break
                 default:
                     Toast.info(result.msg || ConfigInfo.reqErrorMsg, ConfigInfo.clearToastTime)
