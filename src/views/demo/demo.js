@@ -15,6 +15,7 @@ class Demo extends React.Component {
         this.toPage = this.toPage.bind(this)
     }
     UNSAFE_componentWillMount () {
+        let {setPageTitle} = this.props
         setPageTitle('新标题')
     }
     async handleClick () {
