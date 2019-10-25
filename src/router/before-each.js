@@ -14,7 +14,7 @@ class BeforeEach extends React.Component {
         // 设置标题
         _setPageTitle(CurrentRouterConfig.title)
         // 不需要认证
-        if (!CurrentRouterConfig.auth) return <Route exact path={pathname} component={component}  />
+        if (!CurrentRouterConfig.auth) return <Route exact path={pathname} component={component} />
         // 登录信息存在
         if (userData.openId) return <Route exact path={pathname} component={component} />
         return <Redirect to='/login' />

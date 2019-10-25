@@ -14,6 +14,7 @@ class Login extends React.Component {
             demo: 'demo',
             params: _getRouterParams(this.props.location.search, 'type')
         }
+        console.log(this.props)
         this.login = this.login.bind(this)
     }
     async login () {
@@ -31,7 +32,7 @@ class Login extends React.Component {
     render () {
         return (
             <div>
-                <Button onClick={this.login}>点我登录</Button>
+                <Button className="text-ellipsis" onClick={this.login}>点我登录</Button>
             </div>
         )
     }

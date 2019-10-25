@@ -32,7 +32,7 @@ class Demo extends React.Component {
         return (
             <div>
                 <TopHeader item={this.state.demo} />
-                <Button type="primary" onClick={this.handleClick}>点我请求数据</Button>
+                <Button type="primary" onClick={this.handleClick} >点我请求数据</Button>
                 <Button onClick={this.toPage}>点我去登录页</Button>
             </div>
         )
