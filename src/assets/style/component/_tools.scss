@@ -77,3 +77,22 @@
     width: 100%;
   }
 }
+
+/*一像素问题*/
+.border-1px{
+  content: '';
+  @include position(absolute, 0);
+  @include widthHeight(100%, 1px);
+  background-color: $titleColor;
+  transform-origin: 50% 0;
+}
+@media only screen and (-webkit-device-pixel-ratio: 2) {
+  .border-1px:before{
+    transform: scaleY(.5);
+  }
+}
+@media only screen and (-webkit-device-pixel-ratio: 3) {
+  .border-1px:before{
+    transform: scale(.33);
+  }
+}

@@ -33,6 +33,7 @@ class Login extends React.Component {
         return (
             <div>
                 <Button className="text-ellipsis" onClick={this.login}>点我登录</Button>
+                <div className="example"></div>
             </div>
         )
     }
